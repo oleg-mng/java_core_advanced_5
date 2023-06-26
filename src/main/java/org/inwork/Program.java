@@ -10,7 +10,15 @@ import static java.nio.file.Files.copy;
 
 public class Program {
     public static void main(String[] args) throws IOException {
-        copyBackUpFiles(".");
+//        byte[][] ar = new byte[][]{
+//                {1, 1, 1},
+//                {2, 2, 2},
+//                {3, 3, 3},
+//        };
+        ThreeBytes threeBytes = new ThreeBytes();
+        threeBytes.writeThreeBytesFile("threeBytes.txt");
+
+//        copyBackUpFiles(".");
 
     }
 
@@ -22,13 +30,10 @@ public class Program {
         for (int i = 0; i < dir.length; i++) {
             if (dir[i].isFile()) {
                 for (int j = 0; j < dir.length; j++) {
-                    copy(dir[i], dest);
+                    Files.copy(dir[i].toPath(), dest.toPath());
                 }
 
             }
         }
-    }
-    private static void copy(File source, File dest) throws IOException{
-        Files.copy(source.toPath(), dest.toPath());
     }
 }
