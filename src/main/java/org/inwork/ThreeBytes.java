@@ -4,7 +4,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
 
 public class ThreeBytes {
     private byte option1 = 0;
@@ -35,15 +37,22 @@ public class ThreeBytes {
             b = (byte) (b | ar[i][0]);
             list.add(b);
         }
-        String s = new String(list.toString());
+        System.out.println(Arrays.toString(list.toArray()));
 
-            try (FileOutputStream fileOutputStream = new FileOutputStream(filename)) {
-                fileOutputStream.write(s.getBytes());
-
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+            for (byte c : list) {
+                System.out.println(Integer.toBinaryString(c & 255 | 256).substring(1));
             }
-        }
 
+        try (FileOutputStream fileOutputStream = new FileOutputStream(filename)) {
+            fileOutputStream.write(list.toString().getBytes());
+            for (byte c : list) {
+                fileOutputStream.write(Integer.toBinaryString(c & 255 | 256).substring(1).getBytes());
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
+
+

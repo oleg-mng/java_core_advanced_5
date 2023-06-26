@@ -10,11 +10,7 @@ import static java.nio.file.Files.copy;
 
 public class Program {
     public static void main(String[] args) throws IOException {
-//        byte[][] ar = new byte[][]{
-//                {1, 1, 1},
-//                {2, 2, 2},
-//                {3, 3, 3},
-//        };
+
         ThreeBytes threeBytes = new ThreeBytes();
         threeBytes.writeThreeBytesFile("threeBytes.txt");
 
