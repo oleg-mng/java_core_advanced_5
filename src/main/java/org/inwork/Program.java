@@ -30,9 +30,6 @@ public class Program {
             Logger.getLogger(BackUpFolder.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-//        copyBackUpFiles(".");
-        System.out.println();
-
     }
 }
 
