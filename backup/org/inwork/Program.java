@@ -2,26 +2,21 @@ package org.inwork;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static java.nio.file.Files.copy;
 
 public class Program {
     public static void main(String[] args) throws IOException {
         /**
-         * write to file 9 values (from 0 to 3) using 3 bytes
+         * write to file 9 values (from 0 to 3) using 3 bytes.
          */
 
         ThreeBytes threeBytes = new ThreeBytes();
         threeBytes.writeThreeBytesFile("threeBytes.txt");
 
         /**
-         * copy files from folder to backup folder
+         * copy files from folder to backup folder.
          */
 
         try {
@@ -38,6 +33,11 @@ public class Program {
 //        copyBackUpFiles(".");
 
     }
+}
+
+
+
+
 
 //    private static void copyBackUpFiles(String p) throws IOException {
 //        List<String> list = new ArrayList<>();
@@ -59,4 +59,3 @@ public class Program {
 //        }
 //
 //    }
-}
