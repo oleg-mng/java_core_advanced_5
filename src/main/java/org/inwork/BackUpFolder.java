@@ -3,7 +3,7 @@ package org.inwork;
 import java.io.*;
 
 public class BackUpFolder {
-    private void copyDirectory(File source, File target) throws IOException {
+    public void copyDirectory(File source, File target) throws IOException {
         if (!target.exists()) {
             target.mkdir();
         }
@@ -16,7 +16,6 @@ public class BackUpFolder {
         if (sourceLocation.isDirectory()) {
             copyDirectory(sourceLocation, targetLocation);
         } else copyFile(sourceLocation, targetLocation);
-
     }
 
     public void copyFile(File source, File target) throws IOException {
@@ -31,7 +30,5 @@ public class BackUpFolder {
             }
         }
     }
-
-
 
 }
