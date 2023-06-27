@@ -14,14 +14,14 @@ import static java.nio.file.Files.copy;
 public class Program {
     public static void main(String[] args) throws IOException {
         /**
-         * write to file 9 values (from 0 to 3) using 3 bytes.
+         * write to file 9 values (from 0 to 3) using 3 bytes
          */
 
         ThreeBytes threeBytes = new ThreeBytes();
         threeBytes.writeThreeBytesFile("threeBytes.txt");
 
         /**
-         * copy files from folder to backup folder.
+         * copy files from folder to backup folder
          */
 
         try {
@@ -38,11 +38,6 @@ public class Program {
 //        copyBackUpFiles(".");
 
     }
-}
-
-
-
-
 
 //    private static void copyBackUpFiles(String p) throws IOException {
 //        List<String> list = new ArrayList<>();
@@ -64,3 +59,4 @@ public class Program {
 //        }
 //
 //    }
+}
