@@ -35,27 +35,3 @@ public class Program {
     }
 }
 
-
-
-
-
-//    private static void copyBackUpFiles(String p) throws IOException {
-//        List<String> list = new ArrayList<>();
-//        String k = ".";
-//        File path = new File(new File(".").getCanonicalPath());
-//        File[] dir = path.listFiles();
-////        File dest = new File("./backupT");
-//        for (int i = 0; i < dir.length; i++) {
-//            if (dir[i].isFile()) {
-//                for (int j = 0; j < dir.length; j++) {
-//                    try {
-//                        Files.copy(dir[i].toPath(), Path.of("./backupT"));
-//                    } catch (IOException ex) {
-//                        ex.getMessage();
-//                    }
-//                }
-//
-//            }
-//        }
-//
-//    }
